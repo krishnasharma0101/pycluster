@@ -1,0 +1,116 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pycluster"
+version = "0.1.0"
+description = "Distributed parallel execution across LAN devices"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "PyCluster Team", email = "team@pycluster.dev"}
+]
+maintainers = [
+    {name = "PyCluster Team", email = "team@pycluster.dev"}
+]
+keywords = ["distributed", "computing", "parallel", "execution", "cluster", "lan"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: System :: Distributed Computing",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.7"
+dependencies = [
+    "cloudpickle>=2.0.0",
+    "cryptography>=3.4.0",
+    "aiofiles>=0.8.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0.0",
+    "pytest-asyncio>=0.18.0",
+    "black>=21.0.0",
+    "flake8>=3.9.0",
+    "mypy>=0.910",
+]
+
+[project.urls]
+Homepage = "https://github.com/pycluster/pycluster"
+Documentation = "https://pycluster.readthedocs.io/"
+Repository = "https://github.com/pycluster/pycluster"
+"Bug Tracker" = "https://github.com/pycluster/pycluster/issues"
+"Source Code" = "https://github.com/pycluster/pycluster"
+
+[project.scripts]
+pycluster = "pycluster.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pycluster*"]
+
+[tool.setuptools.package-data]
+pycluster = ["*.txt", "*.md"]
+
+[tool.black]
+line-length = 88
+target-version = ['py37', 'py38', 'py39', 'py310', 'py311', 'py312']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = ["E203", "W503"]
+exclude = [
+    ".git",
+    "__pycache__",
+    "build",
+    "dist",
+    ".eggs",
+    "*.egg",
+]
+
+[tool.mypy]
+python_version = "3.7"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+
+[[tool.mypy.overrides]]
+module = [
+    "cryptography.*",
+    "cloudpickle.*",
+    "aiofiles.*",
+]
+ignore_missing_imports = true 
