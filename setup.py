@@ -59,10 +59,10 @@ setup(
     },
     keywords="distributed computing parallel execution cluster lan",
     project_urls={
-        "Homepage": "https://github.com/pycluster/pycluster",
+        "Homepage": "https://github.com/krishnasharma0101/pycluster",
         "Documentation": "https://pycluster.readthedocs.io/",
-        "Repository": "https://github.com/pycluster/pycluster",
-        "Bug Tracker": "https://github.com/pycluster/pycluster/issues",
-        "Source Code": "https://github.com/pycluster/pycluster",
+        "Repository": "https://github.com/krishnasharma0101/pycluster",
+        "Bug Tracker": "https://github.com/krishnasharma0101/pycluster/issues",
+        "Source Code": "https://github.com/krishnasharma0101/pycluster",
     },
 ) 

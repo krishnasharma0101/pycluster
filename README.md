@@ -24,10 +24,10 @@ PyCluster is a Python library that enables distributed parallel execution of Pyt
 
 ```bash
 # Install directly from GitHub
-pip install git+https://github.com/pycluster/pycluster.git
+pip install git+https://github.com/krishnasharma0101/pycluster.git
 
 # Or install with development dependencies
-pip install git+https://github.com/pycluster/pycluster.git#egg=pycluster[dev]
+pip install git+https://github.com/krishnasharma0101/pycluster.git#egg=pycluster[dev]
 ```
 
 #### Option 2: Clone and Install Locally
