@@ -355,9 +355,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🆘 Support
 
-- **Issues**: [GitHub Issues](https://github.com/pycluster/pycluster/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/pycluster/pycluster/discussions)
-- **Documentation**: [Read the Docs](https://pycluster.readthedocs.io/)
+- **Issues**: [GitHub Issues](https://github.com/krishnasharma0101/pycluster/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/krishnasharma0101/pycluster/discussions)
+- **Documentation**: (Coming soon)
 
 ## 🎯 Roadmap
 
